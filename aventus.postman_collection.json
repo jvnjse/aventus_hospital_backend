@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "64c6f577-08a6-42df-ad4d-e9bb5589d3ef",
+		"name": "aventus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26143472"
+	},
+	"item": [
+		{
+			"name": "patients",
+			"item": [
+				{
+					"name": "add patients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"patient_id\": \"P001\",\r\n        \"name\": \"{{$randomFullName}}\",\r\n        \"contact_information\": \"{{$randomStreetAddress}}\",\r\n        \"medical_history\": \"Asthma\",\r\n        \"date_of_birth\": \"1999-05-30\",\r\n        \"gender\": \"Male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/patients/"
+					},
+					"response": []
+				},
+				{
+					"name": "get patients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/patients/"
+					},
+					"response": []
+				},
+				{
+					"name": "get single patient",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"name\": \"{{$randomFullName}}\",\r\n        \"contact_information\": \"{{$randomStreetAddress}}\",\r\n        \"medical_history\": \"Asthma\",\r\n        \"date_of_birth\": \"1999-05-30\",\r\n        \"gender\": \"Male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/patients/P001/"
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"patient_id\":\"P001\",\r\n        \"name\": \"{{$randomFullName}}\",\r\n        \"contact_information\": \"{{$randomStreetAddress}}\",\r\n        \"medical_history\": \"Asthma\",\r\n        \"date_of_birth\": \"1999-05-30\",\r\n        \"gender\": \"Male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/patients/P001/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/patients/P001/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"item": [
+				{
+					"name": "add appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"patient_id\": \"P001\",\r\n        \"name\": \"{{$randomFullName}}\",\r\n        \"contact_information\": \"{{$randomStreetAddress}}\",\r\n        \"medical_history\": \"Asthma\",\r\n        \"date_of_birth\": \"1999-05-30\",\r\n        \"gender\": \"Male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/appointments/"
+					},
+					"response": []
+				},
+				{
+					"name": "get appointment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/appointments/"
+					},
+					"response": []
+				},
+				{
+					"name": "get single appointment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"name\": \"{{$randomFullName}}\",\r\n        \"contact_information\": \"{{$randomStreetAddress}}\",\r\n        \"medical_history\": \"Asthma\",\r\n        \"date_of_birth\": \"1999-05-30\",\r\n        \"gender\": \"Male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/appointments/A001/"
+					},
+					"response": []
+				},
+				{
+					"name": "edit appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"appointment_id\": \"A002\",\r\n        \"patient\": \"P001\",\r\n        \"doctor_name\": \"Dr. Cathy edited\",\r\n        \"department\": \"Cardiology\",\r\n        \"appointment_date\": \"2024-07-17\",\r\n        \"appointment_time\": \"16:30:00\",\r\n        \"reason_for_visit\": \"Emergency visit\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/appointments/A002/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}api/appointments/A001/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "upload excel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/Hospital_Management_Template.xlsx"
+						}
+					]
+				},
+				"url": "{{base_url}}api/upload/"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/",
+			"type": "string"
+		}
+	]
+}
